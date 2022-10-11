@@ -9,7 +9,8 @@ streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
 import pandas
 
-
+streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
+streamlit.dataframe(my_fruit_list)
 
 streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Straberries'])
 my_fruit_list = my_fruit_list.set_index('Fruit')
