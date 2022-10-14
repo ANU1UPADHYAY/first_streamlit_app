@@ -37,7 +37,7 @@ my_cur = my_cnx.cursor()
 my_cur.execute("use warehouse pc_rivery_wh") 
 my_cur.execute("select * from fruit_load_list")
 my_data_row = my_cur.fetchone()
-streamlit.text("The fruit load list contain:")
-streamlit.text(my_data_row)
+streamlit.header("The fruit load list contain:")
+streamlit.dataframe(my_data_row)
 
 
